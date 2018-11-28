@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./lib/vue.min.js"></script>
+<body>
+    <div id="app">
+        {{me}}
+        <div v-cloak="me2">
+           ======= {{me2}}
+        </div>
+        <div v-text="me2">cmkslmas</div>
+        <div class="btn btn-info">查看页面信息</div>
+        <button v-on:click="show=!show">点我</button>
+        transition
+        <p></p>
+    </div>
+   
+     
+</body>
+
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            me:'nihao',
+            me2:'<h1>cjkahvakvb</h1>',
+            bt:'页面加载于'+ new Date().toLocaleDateString(),
+        }
+    })
+</script>
+</html>
